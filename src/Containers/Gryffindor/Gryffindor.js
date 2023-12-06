@@ -21,6 +21,22 @@ const Gryffindor = () => {
       name: "Minerva McGonagall",
       image: "https://ik.imagekit.io/hpapi/mcgonagall.jpg",
     },
+    {
+      name: "Harry Potter",
+      image: "https://ik.imagekit.io/hpapi/harry.jpg",
+    },
+    {
+      name: "Hermione Granger",
+      image: "https://ik.imagekit.io/hpapi/hermione.jpeg",
+    },
+    {
+      name: "Ron Weasley",
+      image: "https://ik.imagekit.io/hpapi/ron.jpg",
+    },
+    {
+      name: "Minerva McGonagall",
+      image: "https://ik.imagekit.io/hpapi/mcgonagall.jpg",
+    }
   ];
 
   return (
@@ -28,9 +44,9 @@ const Gryffindor = () => {
       <img width="200px" src={gryf} alt="Gryffindor Logo" />
       RECHERCHE
       <input type="text" />
-      <section className="cardsContainers">
-        {apiAnswer.map((item, index) => (
-          <Card key={index} name={item.name} urlImage={item.image} />
+      <section className="cardsContainer">
+        {apiAnswer.map((item) => (
+          <Card  character = {item} />
         ))}
       </section>
     </div>
